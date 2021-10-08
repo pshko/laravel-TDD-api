@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\TodoList;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Symfony\Component\HttpFoundation\Response;
 use Tests\TestCase;
 
 class TodoListTest extends TestCase
@@ -21,5 +22,14 @@ class TodoListTest extends TestCase
         $response = $this->getJson(route('todo-list.index'));
         $this->assertEquals(1, $this->count($response->json()));
         $this->assertEquals('my list', $response->json()[0]['name']);
+    }
+
+    public function test_fetch_single_todo_list()
+    {
+        $list = TodoList::factory()->create();
+        $response = $this->getJson(route('todo-list.show', $list->id))
+            ->assertOk()
+            ->json();
+        $this->assertEquals($response['name'], $list->name);
     }
 }
