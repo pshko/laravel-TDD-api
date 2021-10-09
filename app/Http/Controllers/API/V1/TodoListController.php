@@ -28,4 +28,10 @@ class TodoListController extends Controller
         ]);
         return response($list, Response::HTTP_CREATED);
     }
+
+    public function destroy(TodoList $todoList)
+    {
+        $todoList->delete();
+        return response('', Response::HTTP_NO_CONTENT);
+    }
 }
