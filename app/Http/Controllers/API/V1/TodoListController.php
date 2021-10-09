@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TodoListRequest;
 use App\Models\TodoList;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class TodoListController extends Controller
@@ -20,9 +20,8 @@ class TodoListController extends Controller
         return response($todo_list, Response::HTTP_OK);
     }
 
-    public function store(Request $request)
+    public function store(TodoListRequest $request)
     {
-        $request->validate(['name' => 'required']);
         $list = TodoList::create([
             'name' => $request->name
         ]);
@@ -35,9 +34,8 @@ class TodoListController extends Controller
         return response('', Response::HTTP_NO_CONTENT);
     }
 
-    public function update(TodoList $todo_list, Request $request)
+    public function update(TodoList $todo_list, TodoListRequest $request)
     {
-        $request->validate(['name' => 'required']);
         $todo_list->update(['name' => $request->name]);
         return response($todo_list, Response::HTTP_OK);
     }
