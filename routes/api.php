@@ -19,8 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/todo-lists', [TodoListController::class, 'index'])->name('todo-list.index');
-Route::get('/todo-lists/{todoList}', [TodoListController::class, 'show'])->name('todo-list.show');
-Route::post('/todo-lists', [TodoListController::class, 'store'])->name('todo-list.store');
-Route::delete('/todo-lists/{todoList}', [TodoListController::class, 'destroy'])->name('todo-list.destroy');
-Route::patch('/todo-lists/{todoList}', [TodoListController::class, 'update'])->name('todo-list.update');
+Route::apiResource('/todo-lists', TodoListController::class);

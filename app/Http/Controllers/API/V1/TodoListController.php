@@ -15,9 +15,9 @@ class TodoListController extends Controller
         return response($todos, Response::HTTP_OK);
     }
 
-    public function show(TodoList $todoList)
+    public function show(TodoList $todo_list)
     {
-        return response($todoList, Response::HTTP_OK);
+        return response($todo_list, Response::HTTP_OK);
     }
 
     public function store(Request $request)
@@ -29,16 +29,16 @@ class TodoListController extends Controller
         return response($list, Response::HTTP_CREATED);
     }
 
-    public function destroy(TodoList $todoList)
+    public function destroy(TodoList $todo_list)
     {
-        $todoList->delete();
+        $todo_list->delete();
         return response('', Response::HTTP_NO_CONTENT);
     }
 
-    public function update(TodoList $todoList, Request $request)
+    public function update(TodoList $todo_list, Request $request)
     {
         $request->validate(['name' => 'required']);
-        $todoList->update(['name' => $request->name]);
-        return response($todoList, Response::HTTP_OK);
+        $todo_list->update(['name' => $request->name]);
+        return response($todo_list, Response::HTTP_OK);
     }
 }
