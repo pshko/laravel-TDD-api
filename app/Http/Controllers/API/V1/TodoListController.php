@@ -12,11 +12,20 @@ class TodoListController extends Controller
     public function index()
     {
         $todos = TodoList::all();
-        return response($todos);
+        return response($todos, Response::HTTP_OK);
     }
 
     public function show(TodoList $todoList)
     {
         return response($todoList, Response::HTTP_OK);
+    }
+
+    public function store(Request $request)
+    {
+
+        $list = TodoList::create([
+            'name' => $request->name
+        ]);
+        return response($list, Response::HTTP_CREATED);
     }
 }
