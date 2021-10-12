@@ -1,0 +1,59 @@
+[33mcommit 9e6398336b99f9f7f629ad0404f251833e1c71d0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sun Oct 10 01:01:38 2021 +0330
+
+    refactor todo list controller
+
+[33mcommit 0692c6f96fb37d4a038113dd7924e3efdbe18eae[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sun Oct 10 00:50:15 2021 +0330
+
+    refactor todo list route
+
+[33mcommit ccff3a71beeddc10ed29615ddc4514c34c815108[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sat Oct 9 19:11:17 2021 +0330
+
+    todo list update
+
+[33mcommit cf9fb14bd7277c8123e1b7e1196b218c4687f20b[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sat Oct 9 18:54:24 2021 +0330
+
+    todo list destroy
+
+[33mcommit 6b58cc9b6737d5bd8c503a4bd366fcd4ef3146f0[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sat Oct 9 16:36:40 2021 +0330
+
+    storing todo list name validation
+
+[33mcommit 75e9b29875c95a6e25ed81b93092019bc0dc018a[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Sat Oct 9 16:10:02 2021 +0330
+
+    store todo list
+
+[33mcommit 1929deca476b1dc48823cd590b09a35b8ba29b70[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Fri Oct 8 16:14:33 2021 +0330
+
+    refactor fetch todo list
+
+[33mcommit 2075fcaa01dd0b1a9e5f2bcf078319d7f58db8d7[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Fri Oct 8 15:58:35 2021 +0330
+
+    show single todo list
+
+[33mcommit bd68119573de6ae271be988790aebe49f9fdbb2e[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Fri Oct 8 14:59:47 2021 +0330
+
+    test fetch all todo list
+
+[33mcommit 0d25a4aa8b41907f39dd9d45fa7a65ea933d97d9[m
+Author: pshko <aram.khorsandi@gmail.com>
+Date:   Mon Oct 4 15:51:30 2021 +0330
+
+    first commit
