@@ -34,4 +34,13 @@ use RefreshDatabase;
             ->assertNoContent();
         $this->assertDatabaseMissing('tasks', ['title' => $task->title]);
     }
+
+    public function test_update_a_task_of_a_todo_list()
+    {
+        $task = $this->createTask();
+        $this->patchJson(route('task.update', $task->id), ['title' => 'updated task title'])
+            ->assertOk()
+        ;
+        $this->assertDatabaseHas('tasks', ['title' => 'updated task title']);
+    }
 }

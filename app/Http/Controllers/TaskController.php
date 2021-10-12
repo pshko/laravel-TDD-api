@@ -24,10 +24,6 @@ class TaskController extends Controller
         return response($task, Response::HTTP_CREATED);
     }
 
-    public function show(Task $task)
-    {
-        //
-    }
 
     public function edit(Task $task)
     {
@@ -36,7 +32,11 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
-        //
+        $task->update([
+            'title' => $request->title
+        ]);
+
+        return response($task, Response::HTTP_OK);
     }
 
     public function destroy(Task $task)
